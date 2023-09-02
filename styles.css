@@ -1,5 +1,6 @@
 :root{
-    --main-text: #caf649;;
+    --main-text: #caf649;
+    --main-bg: #060f14;
 }
 
 *{
@@ -12,8 +13,12 @@ img{
     width: 100%;
 }
 
+span{
+    color: var(--main-text);
+}
+
 body {
-    background-image: url(https://tailwindtoolbox.github.io/Rainblur-Landing-Page/header.png);
+    background-color: var(--main-bg);
     color: rgba(129,140,248,var(--tw-text-opacity));
     letter-spacing: 0;
     line-height: 1.5;
@@ -27,6 +32,7 @@ body {
     nav{
         width: 100%;
         height: 10vh;
+        padding: 0 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -70,18 +76,22 @@ body {
     main {
         display: flex;
         flex-direction: column;
-        height: 60vh;
+        align-items: center;
+        padding: 60px 0;
     }
 
     .hero-text{
         color: var(--main-text);
-        padding-top: 60px;
     }
 
     .hero-text p {
         font-size: 4.5vw;
         text-align: center;
        padding-top: 20px;
+    }
+
+    .hero-image{
+        padding-top: 20px;
     }
 
     h1{
@@ -123,13 +133,31 @@ body {
         h2{
             font-size: 3vw;
         }
+        
+        main {
+            flex-direction: row;
+            min-height: 60vh;
+            justify-content: center;
+        }
+
+        .hero-text{
+            padding-top: 0px;
+            width: 55%;
+        }
+
+        .hero-image{
+            width: 40%;
+        }
 
         .hero-text p {
             font-size: 2.5vw;
         }
-        /* main {
-            /* flex-direction: row; */
-        /* } */ 
+
+        .cta{
+            gap: 30px;
+        }
+
+        
 
 
     }
@@ -144,11 +172,34 @@ body {
             font-size: 2vw;
         }
 
+        main {
+           align-items: start;
+        }
+
+        .hero-text{
+            padding-top: 40px;
+            width: 53%;
+        }
+
+        .hero-image{
+            width: 30%;
+        }
+
         .hero-text p {
             font-size: 3vw;
+        }
+
+        footer{
+        height: unset;
+        }
+
+        .cta{
+            gap: 40px;
         }
 
         .cta-btn{
             width: 12rem;
          }
+
+
     }
