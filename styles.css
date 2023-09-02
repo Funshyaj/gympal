@@ -1,20 +1,35 @@
+:root{
+    --main-text: #caf649;;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
 body {
     background-image: url(https://tailwindtoolbox.github.io/Rainblur-Landing-Page/header.png);
     color: rgba(129,140,248,var(--tw-text-opacity));
     letter-spacing: 0;
     line-height: 1.5;
+    margin: 0 10px;
     background-attachment: fixed;
     background-size: cover;
-    margin: 1.5rem;
     min-height: 100vh;
+    font-family: system-ui,-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji';
     }
 
     nav{
         width: 100%;
+        height: 10vh;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 10px;
     }
 
     nav > .logo {
@@ -35,7 +50,7 @@ body {
     nav > .socials > a {
         display: inline-block;
         text-decoration: none;
-        color:rgba(147,197,253);
+        color:var(--main-text);
         text-align: center;
         height: 40px;
         padding: 8px;
@@ -55,17 +70,85 @@ body {
     main {
         display: flex;
         flex-direction: column;
+        height: 60vh;
+    }
+
+    .hero-text{
+        color: var(--main-text);
+        padding-top: 60px;
+    }
+
+    .hero-text p {
+        font-size: 4.5vw;
+        text-align: center;
+       padding-top: 20px;
+    }
+
+    h1{
+        font-size: 10vw;
+        color: white;
+        text-align: center;
+    }
+
+    h2{
+        font-size: 7vw;
+        color: white;
+        text-align: center;
+    }
+
+    footer{
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cta{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .cta-btn{
+       width: 10rem;
     }
 
 
     /* tablet */
     @media (min-width: 768px){
-        main {
-            flex-direction: row;
+        h1{
+            font-size: 7vw;
         }
+
+        h2{
+            font-size: 3vw;
+        }
+
+        .hero-text p {
+            font-size: 2.5vw;
+        }
+        /* main {
+            /* flex-direction: row; */
+        /* } */ 
+
+
     }
 
     /* tablet */
     @media (min-width: 1024px){
+        h1{
+            font-size: 5vw;
+        }
 
+        h2{
+            font-size: 2vw;
+        }
+
+        .hero-text p {
+            font-size: 3vw;
+        }
+
+        .cta-btn{
+            width: 12rem;
+         }
     }
