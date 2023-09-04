@@ -84,14 +84,43 @@ body {
         color: var(--main-text);
     }
 
+    .hero-text > h1 {
+        animation: drop-and-bounce;
+        position: relative;
+        animation-duration: 2s;
+    }
+    
+
     .hero-text p {
         font-size: 4.5vw;
         text-align: center;
        padding-top: 20px;
+       animation: slideIn;
+       position: relative;
+       animation-duration: 1s;
     }
 
     .hero-image{
         padding-top: 20px;
+        animation: fadeIn;
+        animation-duration: 3s;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    @keyframes drop-and-bounce {
+        0%{top: -200px;}
+        40%{top: 0px;}
+        70%{top: -5px;}
+        100%{top: 0px;}
+    }
+
+    @keyframes slideIn {
+        0%{left: -200px;}
+        100%{left: 0px;}
     }
 
     h1{
