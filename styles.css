@@ -151,6 +151,15 @@ body {
        width: 10rem;
     }
 
+    .t-c{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .t-c > a{
+        text-decoration: none;
+    }
 
     /* tablet */
     @media (min-width: 768px){
@@ -184,8 +193,6 @@ body {
         .cta{
             gap: 30px;
         }
-
-        
 
 
     }
